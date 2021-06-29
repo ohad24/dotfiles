@@ -8,7 +8,7 @@ Base on [Atlassian dotfiles tutorial](https://www.atlassian.com/git/tutorials/do
 
 ## Install
 ```bash
-curl -sSL https://raw.githubusercontent.com/ohad24/dotfiles/main/install.sh | sh
+curl -sSL https://raw.githubusercontent.com/ohad24/dotfiles/main/dotfiles-install.sh | sh
 ```
 
 ## First init
