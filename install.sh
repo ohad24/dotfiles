@@ -23,8 +23,8 @@ git clone --bare https://github.com/ohad24/dotfiles.git $DOTFILES_DIR
 # ! /usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
 
 # * Download and install OH-MY-ZSH with --unattended and --keep-zshrc flags.
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-sh install.sh --unattended --keep-zshrc
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O ohmyzsh-setup.sh
+sh ohmyzsh-setup.sh --unattended --keep-zshrc
 
 # * Download powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
