@@ -24,6 +24,7 @@ git clone --bare https://github.com/ohad24/dotfiles.git $DOTFILES_DIR
 
 # * Download and install OH-MY-ZSH with --unattended and --keep-zshrc flags.
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O ohmyzsh-setup.sh
+unset ZSH
 sh ohmyzsh-setup.sh --unattended --keep-zshrc
 
 # * Download powerlevel10k theme
