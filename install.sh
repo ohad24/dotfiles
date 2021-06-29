@@ -6,13 +6,21 @@ set -e
 sudo apt update
 sudo apt install -y git zsh
 
+# * Delete $HOME/dotfiles directory if exists.
+DOTFILES_DIR=$HOME/dotfiles
+if [ -d "$DOTFILES_DIR" ]; then
+    printf '%s\n' "Removing Lock ($DOTFILES_DIR)"
+    rm -rf "$DOTFILES_DIR"
+fi
+
 # * Download ohad24/dotfiles repo via HTTPS
-git clone --bare https://github.com/ohad24/dotfiles.git $HOME/dotfiles
+git clone --bare https://github.com/ohad24/dotfiles.git $DOTFILES_DIR
 # * For SSH use the following command
 # git clone --bare git@github.com:ohad24/dotfiles.git $HOME/dotfiles
 
 # * Checkout the dotfiles repo
-/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
+/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME reset --hard
+# ! /usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
 
 # * Download and install OH-MY-ZSH with --unattended and --keep-zshrc flags.
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
