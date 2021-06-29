@@ -109,4 +109,4 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias k=kubectl
 complete -F __start_kubectl k
-alias config='/usr/bin/git --git-dir=/home/ohad/dotfiles/ --work-tree=/home/ohad'
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=/home/ohad'
