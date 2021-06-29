@@ -2,6 +2,15 @@
 
 Base on [Atlassian dotfiles tutorial](https://www.atlassian.com/git/tutorials/dotfiles)
 
+## Prerequisites
+* curl
+* sudo access
+
+## Install
+```bash
+curl -sSL https://raw.githubusercontent.com/ohad24/dotfiles/main/install.sh | sh
+```
+
 ## First init
 ```bash
 git init --bare $HOME/dotfiles
