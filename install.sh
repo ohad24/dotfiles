@@ -4,7 +4,7 @@ set -e
 
 # * Update apt and install git and zsh
 sudo apt update
-sudo apt install -y git zsh
+sudo apt install -y git zsh wget
 
 # * Delete $HOME/dotfiles directory if exists.
 DOTFILES_DIR=$HOME/dotfiles
