@@ -37,4 +37,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 # * Change the defalt shell
 sudo chsh -s $(which zsh) $(whoami)
 
-echo -e '\e[93mDone! run zsh command to enter the shell'
+echo '\e[93mDone! run zsh command to enter the shell'
