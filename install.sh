@@ -19,8 +19,8 @@ git clone --bare https://github.com/ohad24/dotfiles.git $DOTFILES_DIR
 # git clone --bare git@github.com:ohad24/dotfiles.git $HOME/dotfiles
 
 # * Checkout the dotfiles repo
-/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME reset --hard
-# ! /usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
+/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
 
 # * Download and install OH-MY-ZSH with --unattended and --keep-zshrc flags.
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O ohmyzsh-setup.sh
