@@ -108,5 +108,9 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 alias k=kubectl
+alias dc=docker-compose
 complete -F __start_kubectl k
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
