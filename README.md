@@ -12,6 +12,7 @@ curl -sSL https://raw.githubusercontent.com/ohad24/dotfiles/main/dotfiles-instal
 ```
 
 ## First init
+Start from scratch.
 ```bash
 git init --bare $HOME/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
